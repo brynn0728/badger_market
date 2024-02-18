@@ -7,6 +7,9 @@ public class soft {
                 System.out.println(i * j);
             }
         }
+        System.out.println("editted");
     }
+
+
 
 }
