@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Bootstrap Navar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Apple Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!--Product-->
+<div class="container mt-3">
+</div>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Include Firebase JS -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+
+
+<!-- Link main.css-->
+    <link href="main.css" rel="stylesheet">
+
+<!-- Firebase Project app (name: apple)-->
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAe-JmNwOsx82LKx0jZ7PwwiE3yLMqcceY",
+        authDomain: "applemarket-6527a.firebaseapp.com",
+        databaseURL: "https://applemarket-6527a-default-rtdb.firebaseio.com",
+        projectId: "applemarket-6527a",
+        storageBucket: "applemarket-6527a.appspot.com",
+        messagingSenderId: "284577445010",
+        appId: "1:284577445010:web:742f5078e8fab3431d224b"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+    </script>
+
+<!-- Firestore Database 자료<Collection(Folder) 안  Document(File)> 꺼내기 -->
+    <script>
+        const db = firebase.firestore();
+         // Read Firestore Database : db.collection('컬렉션이름').get().then(()=>{})
+        db.collection('product').get().then((결과)=>{
+            // DB에 있던 doc 갯수만큼 HTML을 복붙해주세요 & 반복문 : forEach()
+            결과.forEach((doc)=>{
+                console.log(doc.data())
+                var 템플릿 = `<div class="product">
+                    <div class="thumbnail" style="background-image: url('${doc.data().Image}')"></div>
+                    <div class="flex-grow-1 p-4">
+                        <!-- Firestore Database -->
+                        <h5 class="title"><a href="/detail.htm?id=${doc.id}">${doc.data().제목}</a></h5>
+                        <p class="date">2030년 1월 8일</p>
+                        <p class="price">$ ${doc.data().가격}</p>
+                        <p class="float-end">heart</p>
+                    </div>
+                </div>`;
+                // container : <div class="container mt-3">
+                $('.container').append(템플릿)
+            })
+        })
+
+    </script>
+
+</body>
+</html>
