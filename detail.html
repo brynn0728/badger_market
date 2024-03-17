@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .custom-red-bg {
+      background-color: #993333;
+    }
+
+    /* 로고와 링크에 Roboto 폰트 적용 */
+    .navbar-brand {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 550;
+      font-size: 26px; /* 브랜드 이름의 폰트 크기를 변경 */
+    }
+
+    .nav-link {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Bootstrap Navar-->
+<nav class="navbar navbar-expand-lg custom-red-bg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://firebasestorage.googleapis.com/v0/b/applemarket-6527a.appspot.com/o/BuckyBadger.svg.png?alt=media&token=e373f2a7-357b-47a0-89fb-60951cff95a4" alt="Logo" style="height: 50px; margin-right: 20px;">
+      BADGER MARKET
+    </a>
+    <span class="ms-auto mx-2" id="userName"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <style>
+        .custom-red-bg {
+          background-color: #993333;
+        }
+        .navbar-toggler {
+          border-color: #993333;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+          color: #fff;
+        }
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+          color: #cc9999;
+        }
+      </style>
+    </div>
+  </div>
+</nav>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Include Firebase JS -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+
+
+<!-- Link main.css-->
+<link href="main.css" rel="stylesheet">
+
+<!-- Firebase Project app (name: apple)-->
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAe-JmNwOsx82LKx0jZ7PwwiE3yLMqcceY",
+    authDomain: "applemarket-6527a.firebaseapp.com",
+    databaseURL: "https://applemarket-6527a-default-rtdb.firebaseio.com",
+    projectId: "applemarket-6527a",
+    storageBucket: "applemarket-6527a.appspot.com",
+    messagingSenderId: "284577445010",
+    appId: "1:284577445010:web:742f5078e8fab3431d224b"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig)
+</script>
+
+<div class="container">
+  상세페이지임
+
+<!--  (edit) uniqe한 edit page 필요 : query string 이용 -->
+  <button id="edit">수정하기</button>
+
+  <div class="detail-pic my-4" style="background-image: url('https://picsum.photos/400');"></div>
+  <div>
+    <h5>올린사람 : 모름</h5>
+    <hr>
+    <h5 class="title">지금 url에 기록된 id를 가진 게시물의 상품명</h5>
+    <p class="date">올린날짜</p>
+    <p class="price">지금 url에 기록된 id를 가진 게시물의 가격</p>
+  </div>
+</div>
+
+<!-- Save information in Firestore Database  -->
+<script>
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+ //  (edit) url에 있는 id 가져오기
+  var 쿼리스트링 = new URLSearchParams(window.location.search);
+  var id = 쿼리스트링.get('id'); // 이 부분에서 id 값을 제대로 가져오고 있는지 확인
+
+  db.collection('product').doc(쿼리스트링.get('id')).get().then((result) => {
+    console.log(result.data())
+    $('.title').html(result.data().제목)
+    $('.price').html(result.data().가격)
+    $('.detail-pic').css('background-image', `url(${result.data().image})`)
+  }).catch((error) => {
+    console.error("Error fetching document:", error);
+  });
+
+  // (edit) edit.html?id=현재게시물id 로 이동
+  $('#edit').click(function (){
+    window.location.href = 'edit.html?id=' + 쿼리스트링.get('id')
+  })
+
+</script>
+
+</body>
+</html>
