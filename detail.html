@@ -126,7 +126,7 @@
   상세페이지임
 
 <!--  (edit) uniqe한 edit page 필요 : query string 이용 -->
-  <button id="edit">수정하기</button>
+<button id="edit">수정하기</button>
 
   <div class="detail-pic my-4" style="background-image: url('https://picsum.photos/400');"></div>
   <div>
@@ -135,7 +135,10 @@
     <h5 class="title">지금 url에 기록된 id를 가진 게시물의 상품명</h5>
     <p class="date">올린날짜</p>
     <p class="price">지금 url에 기록된 id를 가진 게시물의 가격</p>
+
+    <button class="btn btn-outline-secondary" id="chat">채팅</button>
   </div>
+
 </div>
 
 <!-- Save information in Firestore Database  -->
@@ -148,6 +151,12 @@
   var id = 쿼리스트링.get('id'); // 이 부분에서 id 값을 제대로 가져오고 있는지 확인
 
   db.collection('product').doc(쿼리스트링.get('id')).get().then((result) => {
+
+    판매자uid = result.data().uid;
+    상품명 = result.data().제목;
+
+    $('.author').html('올린사람 : ' + result.data().이름)
+
     console.log(result.data())
     $('.title').html(result.data().제목)
     $('.price').html(result.data().가격)
@@ -160,6 +169,20 @@
   $('#edit').click(function (){
     window.location.href = 'edit.html?id=' + 쿼리스트링.get('id')
   })
+
+  var 내uid= JSON.parse(localStorage.getItem('user')).uid
+
+  $('#chat').click(function(){
+    var 데이터 = {
+      who : [내uid, 판매자uid],
+      product : 상품명,
+      date : new Date()
+    }
+    db.collection('chatroom').add(데이터)
+  })
+
+  var 판매자uid ;
+  var 상품명;
 
 </script>
 
