@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-        crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    .custom-red-bg {
-      background-color: #993333;
-    }
+    <style>
+        .custom-red-bg {
+            background-color: #993333;
+        }
 
-    /* 로고와 링크에 Roboto 폰트 적용 */
-    .navbar-brand {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 550;
-      font-size: 26px; /* 브랜드 이름의 폰트 크기를 변경 */
-    }
+        /* 로고와 링크에 Roboto 폰트 적용 */
+        .navbar-brand {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 550;
+            font-size: 26px; /* 브랜드 이름의 폰트 크기를 변경 */
+        }
 
-    .nav-link {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
-  </style>
+        .nav-link {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+    </style>
 </head>
 <body>
 
 <!-- Bootstrap Navar-->
 <nav class="navbar navbar-expand-lg custom-red-bg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="https://firebasestorage.googleapis.com/v0/b/applemarket-6527a.appspot.com/o/BuckyBadger.svg.png?alt=media&token=e373f2a7-357b-47a0-89fb-60951cff95a4" alt="Logo" style="height: 50px; margin-right: 20px;">
-      BADGER MARKET
-    </a>
-    <span class="ms-auto mx-2" id="userName"></span>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      <style>
-        .custom-red-bg {
-          background-color: #993333;
-        }
-        .navbar-toggler {
-          border-color: #993333;
-        }
-        .navbar-brand,
-        .navbar-nav .nav-link {
-          color: #fff;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-          color: #cc9999;
-        }
-      </style>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://firebasestorage.googleapis.com/v0/b/applemarket-6527a.appspot.com/o/BuckyBadger.svg.png?alt=media&token=e373f2a7-357b-47a0-89fb-60951cff95a4" alt="Logo" style="height: 50px; margin-right: 20px;">
+            BADGER MARKET
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+<!--  nav 빨간색으로 수정  -->
+            <style>
+                .custom-red-bg {
+                    background-color: #993333;
+                }
+                .navbar-toggler {
+                    border-color: #993333;
+                }
+                .navbar-brand,
+                .navbar-nav .nav-link {
+                    color: #fff;
+                }
+                .navbar-nav .nav-link:hover,
+                .navbar-nav .nav-link.active {
+                    color: #cc9999;
+                }
+            </style>
+
+        </div>
     </div>
-  </div>
 </nav>
+
+<!--Product-->
+<div class="container mt-3">
+</div>
 
 <!-- Include jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -103,141 +109,79 @@
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
 
 
+
 <!-- Link main.css-->
-<link href="main.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 
 <!-- Firebase Project app (name: apple)-->
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyAe-JmNwOsx82LKx0jZ7PwwiE3yLMqcceY",
-    authDomain: "applemarket-6527a.firebaseapp.com",
-    databaseURL: "https://applemarket-6527a-default-rtdb.firebaseio.com",
-    projectId: "applemarket-6527a",
-    storageBucket: "applemarket-6527a.appspot.com",
-    messagingSenderId: "284577445010",
-    appId: "1:284577445010:web:742f5078e8fab3431d224b"
-  };
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAe-JmNwOsx82LKx0jZ7PwwiE3yLMqcceY",
+        authDomain: "applemarket-6527a.firebaseapp.com",
+        databaseURL: "https://applemarket-6527a-default-rtdb.firebaseio.com",
+        projectId: "applemarket-6527a",
+        storageBucket: "applemarket-6527a.appspot.com",
+        messagingSenderId: "284577445010",
+        appId: "1:284577445010:web:742f5078e8fab3431d224b"
+    };
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig)
-</script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+    </script>
 
-<!--Name, Email. Password Input Section-->
-<div class="container mt-3">
-  <div class="mb-3">
-    <input type="text" class="form-control" placeholder="name" id="name-new">
-  </div>
-  <div class="mb-3">
-    <input type="email" class="form-control" placeholder="email" id="email-new">
-  </div>
-  <div class="mb-3">
-    <input type="password" class="form-control" placeholder="pw" id="pw-new">
-  </div>
-  <button type="submit" class="btn btn-primary" id="register">가입하기</button>
-</div>
+<!-- Firestore Database 자료<Collection(Folder) 안  Document(File)> 꺼내기 -->
+    <script>
+        $(document).ready(function() {
+            const db = firebase.firestore();
 
-<div class="container mt-3">
-  <div class="mb-3">
-    <input type="email" class="form-control" placeholder="email" id="email">
-  </div>
-  <div class="mb-3">
-    <input type="password" class="form-control" placeholder="pw" id="pw">
-  </div>
-  <button type="submit" class="btn btn-primary" id="login">로그인하기</button>
-  <button type="submit" class="btn btn-primary" id="logout">로그아웃</button>
-</div>
+            // Read Firestore Database and create product templates
+            db.collection('product').get().then((결과)=>{
+                결과.forEach((doc)=>{
+                    var date = doc.data().날짜.toDate();
+                    var dateString = date.getFullYear() + '년 ' + (date.getMonth() + 1) + '월 ' + date.getDate() + '일';
+                    var 템플릿 = `<div class="product">
+                <div class="thumbnail" style="background-image: url('${doc.data().image}')"></div>
+                <div class="flex-grow-1 p-4">
+                    <h5 class="title"><a href="detail.html?id=${doc.id}">${doc.data().제목}</a></h5>
+                    <p class="date">${dateString}</p>
+                    <p class="price">$ ${doc.data().가격}</p>
+                    <p class="float-end wish-icon" data-id="${doc.id}" data-wishlist="false">♡</p>
+                </div>
+            </div>`;
+                    $('.container').append(템플릿);
+                });
+            });
 
-<!-- Save information in Firestore Database  -->
-<script>
-  const db = firebase.firestore();
-  const storage = firebase.storage();
+            // Global click event handler for wishlist icons
+            $(document).on('click', '.wish-icon', function() {
+                var $icon = $(this); // 클릭된 아이콘
+                var productId = $icon.data('id'); // 상품 ID
+                var inWishlist = $icon.data('wishlist'); // 위시리스트에 있는지 여부
 
+                firebase.auth().onAuthStateChanged((user) => {
+                    if (user) {
+                        // 로그인한 경우
+                        var wishlistRef = db.collection('users').doc(user.uid).collection('wishlist').doc(productId);
 
-  // Check user information
-
-  /*localStorage에 유저 정보 저장
-  데이터 저장 : localStorage.setItem('데이터이름', '데이터')
-  출력 : localStorage.getItem('데이터이름')
-  삭제: localStorage. removeItem('데이터이름')
-  localStorage는 문자데이터만 저장, object를 문자로 바꾸려면 JSON.stringify 에 넣으면 됨*/
-
-  // var 뺀거 = localStorage.getItem('user')
-  //
-  // $('#userName').html(JSON.parse(뺀거).displayName)
-  //
-  // firebase.auth().onAuthStateChanged((user)=>{
-  //   if (user) {
-  //     console.log(user.uid)
-  //     console.log(user.displayName)
-  //     localStorage.setItem('user', JSON.stringify(user))
-  //   }
-  //
-  // })
-
-  $(document).ready(function () { // Ensure that the DOM is fully loaded
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        // User is signed in
-        console.log(user.uid);
-        console.log(user.displayName);
-        localStorage.setItem('user', JSON.stringify(user));
-
-        // Update the userName span with displayName if available
-        $('#userName').html(user.displayName || 'No name set');
-      } else {
-        // User is signed out
-        localStorage.removeItem('user'); // Clear user from storage on sign out
-        $('#userName').html(''); // Clear the userName display
-      }
-    });
-
-    $('#logout').click(function () {
-      firebase.auth().signOut().then(() => {
-        // This code runs if the sign-out was successful
-        localStorage.removeItem('user');
-        $('#userName').text('');
-      }).catch((error) => {
-        // This code runs if there was an error during sign-out
-        console.error('Logout Error:', error);
-      });
-    });
-
-  $('#login').click(function (){
-
-    var 이메일 = $('#email').val();
-    var 패스워드 = $('#pw').val();
-
-    firebase.auth().signInWithEmailAndPassword(이메일, 패스워드).then((result)=>{
-      console.log(result.user)
-    })
-  })
-
-  $('#register').click(function(){
-    var 이메일 = $('#email-new').val();
-    var 패스워드 = $('#pw-new').val();
-    var 이름 = $('#name-new').val();
-
-    // Firebase Authentication
-    firebase.auth().createUserWithEmailAndPassword(이메일, 패스워드).then((result)=>{
-      console.log(result.user)
-      // Update profile and then proceed
-      return result.user.updateProfile({displayName: 이름});
-    }).then(() => {
-      // Now the displayName should be set, and you can use it
-      var user = firebase.auth().currentUser;
-      if (user) {
-        console.log(user.displayName);
-        // Do something with the displayName
-        $('#userName').html(user.displayName);
-        // Store the user data in localStorage
-        localStorage.setItem('user', JSON.stringify(user));
-      }
-    }).catch((error) => {
-      console.error(error);
-    });
-   });
-  });
-</script>
+                        if (!inWishlist) {
+                            // 아이콘 상태를 ♥로 바꾸고 Firestore에 추가
+                            wishlistRef.set({ productId: productId }).then(() => {
+                                $icon.text('♥').data('wishlist', true);
+                            });
+                        } else {
+                            // 아이콘 상태를 ♡로 바꾸고 Firestore에서 제거
+                            wishlistRef.delete().then(() => {
+                                $icon.text('♡').data('wishlist', false);
+                            });
+                        }
+                    } else {
+                        // 로그인하지 않은 경우
+                        console.log('You need to be logged in to add items to the wishlist!');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
