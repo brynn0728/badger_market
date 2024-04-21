@@ -122,6 +122,19 @@
 
   var 내uid = JSON.parse( localStorage.getItem('user') ).uid
 
+  $('#send').click(function(){
+    var 데이터 = {
+      content : $('#chat-input').val(),
+      date : new Date(),
+      uid : 내uid
+    }
+
+    db.collection('chatroom').doc(채팅방id).collection('messages').add(데이터)
+
+  })
+
+  var 채팅방id;
+
   db.collection('chatroom').where('who', 'array-contains', 내uid).get().then((result)=>{
     result.forEach((a)=>{
       var template = `<li class="list-group-item">
@@ -129,8 +142,22 @@
             <h6 class="text-small">${a.id}</h6>
           </li>`
       $('.chat-list').append(template)
-    })
-  })
+
+      $('.list-group-item').click(function (e) {
+        채팅방id = $(this).children('.text-small').text();
+
+        e.stopImmediatePropagation();
+
+        db.collection('chatroom').doc(채팅방id).collection('messages').orderBy('date').onSnapshot((result)=>{
+        $('.chat-content').html('');
+
+          result.forEach((a)=>{
+            var 템플릿 = `<li><span class="chat-box">${a.data().content}</span></li>`;
+            $('.chat-content').append(템플릿)
+
+          })
+        })
+      });
 </script>
 </body>
 </html>
