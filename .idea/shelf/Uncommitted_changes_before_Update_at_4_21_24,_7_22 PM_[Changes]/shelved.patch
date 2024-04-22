@@ -1,0 +1,117 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectType">
+-    <option name="id" value="jpab" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/sonarlint/securityhotspotstore/index.pb
+===================================================================
+diff --git a/.idea/sonarlint/securityhotspotstore/index.pb b/.idea/sonarlint/securityhotspotstore/index.pb
+deleted file mode 100644
+--- a/.idea/sonarlint/securityhotspotstore/index.pb	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,9 +0,0 @@
+-
+-=
+-
+-wishlist.html,6/3/633c2675cce34c0a0148161b333629b900c186e0
+-:
+-
+-login.html,8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111
+-;
+-wishlist.js,e/7/e7878db978a73324267bdedd6aa3b158b9f64602
+\ No newline at end of file
+Index: .idea/aws.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/aws.xml b/.idea/aws.xml
+deleted file mode 100644
+--- a/.idea/aws.xml	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="accountSettings">
+-    <option name="activeRegion" value="us-east-1" />
+-    <option name="recentlyUsedRegions">
+-      <list>
+-        <option value="us-east-1" />
+-      </list>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/sonarlint/issuestore/index.pb
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+deleted file mode 100644
+--- a/.idea/sonarlint/issuestore/index.pb	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,9 +0,0 @@
+-
+-=
+-
+-wishlist.html,6/3/633c2675cce34c0a0148161b333629b900c186e0
+-:
+-
+-login.html,8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111
+-;
+-wishlist.js,e/7/e7878db978a73324267bdedd6aa3b158b9f64602
+\ No newline at end of file
+Index: .idea/jpa-buddy.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jpa-buddy.xml b/.idea/jpa-buddy.xml
+deleted file mode 100644
+--- a/.idea/jpa-buddy.xml	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="JpaBuddyIdeaProjectConfig">
+-    <option name="renamerInitialized" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
++++ /dev/null	(revision 97ee7e9910fb0b6cb2d3fc425ede599059a6bdd0)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git a/.idea/sonarlint/issuestore/6/3/633c2675cce34c0a0148161b333629b900c186e0 b/.idea/sonarlint/issuestore/6/3/633c2675cce34c0a0148161b333629b900c186e0
+deleted file mode 100644
+diff --git a/.idea/sonarlint/issuestore/8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111 b/.idea/sonarlint/issuestore/8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111
+deleted file mode 100644
+diff --git a/.idea/sonarlint/securityhotspotstore/6/3/633c2675cce34c0a0148161b333629b900c186e0 b/.idea/sonarlint/securityhotspotstore/6/3/633c2675cce34c0a0148161b333629b900c186e0
+deleted file mode 100644
+diff --git a/.idea/sonarlint/securityhotspotstore/8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111 b/.idea/sonarlint/securityhotspotstore/8/0/8069a16aaa89aa2f982404b0d2c7244c6e283111
+deleted file mode 100644
+diff --git a/.idea/sonarlint/securityhotspotstore/e/7/e7878db978a73324267bdedd6aa3b158b9f64602 b/.idea/sonarlint/securityhotspotstore/e/7/e7878db978a73324267bdedd6aa3b158b9f64602
+deleted file mode 100644
